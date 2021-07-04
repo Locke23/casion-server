@@ -1,0 +1,13 @@
+version: "3.8"
+
+services:
+  db:
+    container_name: CasionTimesMongoDB
+    image: mongo:latest
+    restart: always
+    volumes:
+      - ./casionData:/data/db
+    environment:
+      - MONGO_INITDB_DATABASE= CasionTimes
+    ports:
+      - 27017:27017
